@@ -1,0 +1,412 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+.menu-catalogo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.menu-catalogo button {
+  background: #0e0707;
+  color: #f1efef;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-catalogo button:hover {
+  background: #914a4a;
+  color: #f1eeee;
+}
+
+/* Responsive: dos botones por fila en móvil */
+@media (max-width: 600px) {
+  .menu-catalogo button {
+    flex: 1 1 45%;
+  }
+}
+/* Banner */
+.banner {
+  background: url('imagenes/banner.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 40px 15px;   /* antes tenías 80px, lo reducimos */
+  margin-bottom: 0;     /* eliminamos espacio extra debajo */
+}
+
+
+.banner h2 {
+  font-size: 2.5em;
+}
+.banner p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Catálogo */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.producto {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+.producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}                   
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;          /* empuja el footer al fondo */
+}
+
+html, body {
+  height: 100%;              /* toda la altura disponible */
+  margin: 0;
+  display: flex;
+  flex-direction: column;    /* apilar header, main, footer */
+}
+
+main {
+  flex: 1;                   /* ocupa el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centra verticalmente el catálogo */
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Anton&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Anton', sans-serif; /* títulos con estilo urbano */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: 'Oswald', sans-serif; /* textos secundarios */
+}
+
+.logo h1 {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8); /* sombra fuerte */
+}
+
+.banner h2 {
+  font-size: 2.5em;
+  background: linear-gradient(90deg, #ff0000, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* texto con degradado tipo graffiti */
+}
+
+h1 {
+  color: #fff;
+  -webkit-text-stroke: 1px #000; /* contorno negro */
+}
+
+
+.titulo-principal {
+  font-family: 'Anton', sans-serif;   /* fuente gruesa y urbana */
+  font-size: 4em;                     /* más grande que el resto */
+  text-transform: uppercase;          /* todo en mayúsculas */
+  letter-spacing: 3px;                /* separación entre letras */
+  color: #fff;                        /* blanco fuerte */
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.9); /* sombra intensa */
+  -webkit-text-stroke: 2px #4a4545;   /* contorno rojo estilo graffiti */
+} 
+
+
+.titulo-catalogo {
+  margin-top: 0;        /* quitamos espacio arriba */
+  padding-top: 10px;    /* un poco de aire, pero mínimo */
+  color: #fff;
+  text-align: center;
+}
+x 
+
+
+/* From Uiverse.io by mooosakhan */ 
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  flex-direction: column;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.socialBar {
+  position: fixed;        /* siempre visible */
+  top: 85%;               /* centrado vertical */
+  right:  20px;             /* pegado al lado izquierdo */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* íconos uno debajo del otro */
+  gap: 15px;              /* espacio entre íconos */
+  z-index: 1000;          /* encima del contenido */
+}
+
+body {
+  background: linear-gradient(135deg, #000000, #333333, #ff0000);
+  color: #070606;
+}
+
+/* Estilo general del catálogo */
+#catalogo {
+  display: grid;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Escritorio grande: 4 columnas */
+@media (min-width: 1025px) {
+  #catalogo {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets y pantallas medianas: 3 columnas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #catalogo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Móviles grandes: 2 columnas */
+@media (min-width: 481px) and (max-width: 768px) {
+  #catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móviles pequeños: 2 columnas (para que no quede solo una) */
+@media (max-width: 480px) {
+  #catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ajuste de las tarjetas de producto */
+.producto {
+  background: #fff; /* fondo blanco para contraste */
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Banner general */
+.banner {
+  background: #000; /* fondo negro */
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px; /* espacio interno en los costados */
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Logo y nombre */
+.banner .logo {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Menú de categorías */
+.menu-categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.menu-categorias button {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1 1 40%; /* cada botón ocupa un 40% en móvil */
+  text-align: center;
+}
+
+.menu-categorias button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Slogan */
+.slogan {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(255,0,0,0.7);
+  word-wrap: break-word; /* evita que se desborde */
+  padding: 0 10px;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .banner .logo {
+    font-size: 1.5em;
+  }
+
+  .menu-categorias {
+    gap: 10px;
+  }
+
+  .menu-categorias button {
+    font-size: 0.9em;
+  }
+
+  .slogan {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+}
+
+header .logo h1 {
+  font-size: 2.5em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 20px #ff3333, 0 0 40px #ff3333, 0 0 60px #ff3333;
+  }
+}
+
+
+.socialContainer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #ff0000;
+  animation: iconGlow 3s infinite alternate;
+}
+
